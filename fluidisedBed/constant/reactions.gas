@@ -1,0 +1,27 @@
+elements
+(
+    N
+	H
+	O
+);
+species
+(
+    NH3
+    O2
+    N2
+	NO2
+    H2O
+);
+reactions
+{
+    ammoniaCatalyticOxidation
+    {
+        type        irreversibleArrheniusReaction;
+
+        reaction    "NH3^0.93 + O2^0.24 = NO2^0.69 + H2O^1";
+
+        A           1e8;
+        beta        0.86;
+        Ta          1e4;
+    }
+}
